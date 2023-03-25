@@ -1,0 +1,20 @@
+.ui-field
+  width 100%
+  min-height $element_height_mobile
+  max-height $element_height_mobile
+  padding 24px 32px
+  textBody()
+  background-color $color_grey
+  dfx(column, center, flex-start)
+  // State
+  &:focus
+    border-color $color_green
+  // Adaptive
+  // # 767px
+  +bpMin($media_mobile)
+    min-height $element_height_tablet
+    max-height $element_height_tablet
+  // # 1079px
+  +bpMin($media_tablet)
+    min-height $element_height_desktop
+    max-height $element_height_desktop

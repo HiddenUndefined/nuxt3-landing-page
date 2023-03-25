@@ -1,0 +1,35 @@
+{
+  "name": "landing-page",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev --host=localhost --port=3000",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "test": "vitest --config ./vitest.config.js",
+    "test:ui": "vitest --ui --config ./vitest.config.js",
+    "test:watch": "vitest --watch --config ./vitest.config.js",
+    "coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@nuxt/test-utils-edge": "^3.0.1-rc.0-27821553.ab125bd",
+    "@testing-library/vue": "^6.6.1",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "@vitest/ui": "^0.25.3",
+    "@vue/test-utils": "^2.2.4",
+    "happy-dom": "^7.7.0",
+    "nuxt": "^3.3.2",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
+    "stylus": "^0.59.0",
+    "stylus-loader": "^7.1.0",
+    "vite-svg-loader": "^4.0.0",
+    "vitest": "^0.25.3"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.4.5",
+    "pinia": "^2.0.26"
+  }
+}

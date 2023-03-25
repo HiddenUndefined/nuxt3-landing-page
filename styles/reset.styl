@@ -1,0 +1,92 @@
+// IMPORTS
+// –Control
+@import "./control.styl"
+// –Font
+@import "./fonts.styl"
+
+/**
+ * Styles reset
+ */
+*
+  mgPd(0, 0)
+  font-family 'Montserrat', sans-serif
+  box-sizing border-box
+/* Scroll bar */
+*::-webkit-scrollbar
+  width 5px
+*::-webkit-scrollbar-track
+  background $color_grey
+  background-clip content-box !important
+*::-webkit-scrollbar-thumb
+  background: $color_green
+  cursor: pointer !important
+// Animation
+@keyframes skeleton-loader
+  100%
+    transform translateX(100%)
+// DEFAULT
+#layout
+  min-width 100vw
+  max-width 100vw
+  width 100%
+  min-height 100vh
+  dfx(column, flex-start, center)
+  overflow-x hidden
+  position relative
+  // # Selection text color
+  *::-moz-selection
+    color $color_white !important
+    background $color_green !important
+  *::selection
+    color $color_white !important
+    background $color_green !important
+  // # Active
+  *:-webkit-any-link:active
+    color $color_green
+// BODY
+body
+  width 100%
+  dfx(column, flex-start, center)
+  overflow-x hidden
+// # For input type number – hid arrows
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance none
+  margin 0
+// BUTTONS & LINKS
+button, a
+  color $color_black
+  background transparent
+  border none
+  text-decoration none
+  cursor pointer
+  &[disabled]
+    opacity 0.5 !important
+    cursor no-drop !important
+// LABELS
+label
+  cursor pointer
+// FIELDS
+input, textarea
+  border none
+  outline none
+// IMAGE
+img
+  -webkit-user-drag none !important
+// Wrapper: Page
+.page-wrapper
+  width 100%
+  dfx(column, flex-start, center)
+// Wrapper: Component
+.component-wrapper
+  max-width $max_width
+  width 100%
+  padding-left 24px
+  padding-right 24px
+  dfx(column, flex-start, center)
+  // Adaptive
+  // # 1079px
+  +bpMin($media_tablet)
+    padding-left 0
+    padding-right 0

@@ -1,0 +1,64 @@
+// Min & Max
+mmSize($w = 100%, $h = 100%)
+  min-width $w
+  max-width $w
+  width $w
+  min-height $h
+  max-height $h
+  height $h
+// Margin & Padding
+mgPd($mg = 0, $pd = 0)
+  margin $mg
+  padding $pd
+// Media padding
+mediaPd()
+  padding-left 12px
+  padding-right 12px
+// Hid scrollbar
+hidScrollbar()
+  &::-webkit-scrollbar
+    display none !important
+  &::-webkit-scrollbar-track
+    display none !important
+  &::-webkit-scrollbar-thumb
+    display none !important
+// Display: Flex
+dfx($fd = row, $jc = flex-start, $ai = flex-start, $fw = nowrap)
+  display flex
+  flex-direction $fd
+  justify-content $jc
+  align-items $ai
+  flex-wrap $fw
+// Text
+text($fsz = 16px, $fw = 400, $lh = 1.4, $ta = left, $tt = '', $td = '')
+  font-size $fsz
+  font-weight $fw
+  line-height $lh
+  text-align $ta
+  if $tt
+    text-transform $tt
+  if $td
+    text-decoration $td
+// Media breakpoint (form min to max)
+bpMin($w)
+  @media screen and (min-width: $w)
+    {block}
+// Skeleton
+skeleton($w = 100%, $h = 100%, $bg = $color_skeleton_bg, $br = 12px, $bga = $color_skeleton_animation)
+  width $w
+  height $h
+  background $bg
+  border-radius $br
+  overflow: hidden
+  position: relative
+  &::after
+    content: ''
+    width: 100%
+    height: 100%
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), $bga, rgba(255, 255, 255, 0))
+    transform: translate3d(-100%, 0, 0)
+    animation: skeleton-loader 2.5s infinite
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 1
