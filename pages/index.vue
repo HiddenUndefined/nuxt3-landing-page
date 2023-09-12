@@ -13,7 +13,7 @@
  * Page head
  */
 useHead({
-  title: 'Nuxt 3 | Landing Page',
+  title: 'Landing Page',
   meta: [
     { name: 'description', content: 'Amazing landing page with Nuxt 3!' }
   ]
